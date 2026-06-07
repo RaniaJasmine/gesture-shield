@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-sans: "Plus Jakarta Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* LIGHT MODE PALETTE: Premium, precise Swiss-modern layout */
+  --bg-base: #f1f5f9;
+  --text-base: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #94a3b8;
+  --border-main: rgba(58, 74, 96, 0.15);
+  --border-active: rgba(15, 23, 42, 0.25);
+  --glass: rgba(255, 255, 255, 0.85);
+  --surface-lowest: #ffffff;
+  --surface-low: #f8fafc;
+  --surface-container: #ffffff;
+  --surface-high: #f1f5f9;
+  --surface-highest: #e2e8f0;
+  --accent-border: rgba(15, 23, 42, 0.1);
+  --industrial-orange: #ea580c;
+  --industrial-red: #dc2626;
+  --primary-accent: #0f172a;
+  --secondary-accent: #475569;
+  --shadow-color: rgba(15, 23, 42, 0.08);
+  --sidebar-active: #e2e8f0;
+}
+
+.dark {
+  /* DARK MODE PALETTE: Pure sci-fi, rich cinematic deep blue-slate */
+  --bg-base: #020b14;
+  --text-base: #ecf3ff;
+  --text-muted: #94a3b8;
+  --text-dim: #475569;
+  --border-main: rgba(58, 74, 96, 0.35);
+  --border-active: rgba(193, 199, 210, 0.4);
+  --glass: rgba(7, 25, 43, 0.7);
+  --surface-lowest: #000810;
+  --surface-low: #041221;
+  --surface-container: #07192b;
+  --surface-high: #0f243b;
+  --surface-highest: #1a3554;
+  --accent-border: rgba(94, 114, 143, 0.3);
+  --industrial-orange: #f97316;
+  --industrial-red: #ef4444; 
+  --primary-accent: #c1c7d2;
+  --secondary-accent: #bcc7da;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  --sidebar-active: #0f243b;
+}
+
+@theme {
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+
+  --color-bg-base: var(--bg-base);
+  --color-text-base: var(--text-base);
+  --color-text-muted: var(--text-muted);
+  --color-text-dim: var(--text-dim);
+  --color-border-main: var(--border-main);
+  --color-border-active: var(--border-active);
+  --color-glass: var(--glass);
+  --color-surface-lowest: var(--surface-lowest);
+  --color-surface-low: var(--surface-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-high: var(--surface-high);
+  --color-surface-highest: var(--surface-highest);
+  --color-accent-border: var(--accent-border);
+  --color-industrial-orange: var(--industrial-orange);
+  --color-industrial-red: var(--industrial-red);
+  --color-primary-accent: var(--primary-accent);
+  --color-secondary-accent: var(--secondary-accent);
+  --color-sidebar-active: var(--sidebar-active);
+}
+
+@layer utilities {
+  .glass-panel {
+    background: var(--glass);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--border-main);
+    box-shadow: 0 8px 32px 0 var(--shadow-color);
+  }
+
+  .glow-green {
+    box-shadow: 0 0 15px rgba(22, 163, 74, 0.35);
+  }
+
+  .glow-red {
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.35);
+  }
+
+  /* Scrollbar overrides for elegant list layouts */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.animate-scan {
+  animation: scan-line 6s linear infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(0.9); opacity: 0.6; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2s infinite ease-in-out;
+}

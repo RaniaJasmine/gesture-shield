@@ -1,0 +1,6 @@
+{
+  "name": "Gesture Shield",
+  "description": "Industrial Sign Language Intelligence dashboard for monitoring safety gestures, managing team communications, and running real-time AI security diagnostics.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
