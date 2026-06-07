@@ -9,7 +9,7 @@ import {
   Activity, ActivityIcon, Signal, Compass, Monitor, Cpu, Wifi,
   Send, MessageSquare, ArrowRight
 } from "lucide-react";
-import { Device, WifiLink, Message } from "../types.js";
+import type { Device, WifiLink, Message } from "../types.js";
 import WifiPeerLinkCentral from "./WifiPeerLinkCentral.js";
 
 interface VideoCallScreenProps {

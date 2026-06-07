@@ -10,7 +10,7 @@ import {
   Terminal, ShieldCheck, Activity, BrainCircuit, RefreshCw, Cpu
 } from "lucide-react";
 
-import { Operator, Device, Alert, Message, ActiveScreen, WifiLink } from "./types.js";
+import type { Operator, Device, Alert, Message, ActiveScreen, WifiLink } from "./types.js";
 import { DEFAULT_DEVICES, DEFAULT_ALERTS, DEFAULT_MESSAGES } from "./data.js";
 
 // Components

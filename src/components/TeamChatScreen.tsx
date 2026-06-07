@@ -7,7 +7,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { 
   Send, Shield, Bot, Server, User, Plus, Activity
 } from "lucide-react";
-import { Message, Device, Operator } from "../types.js";
+import type { Message, Device, Operator } from "../types.js";
 
 interface TeamChatScreenProps {
   operator: Operator;

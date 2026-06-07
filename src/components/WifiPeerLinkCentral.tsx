@@ -5,7 +5,7 @@
 
 import React, { useState } from "react";
 import { Link2, Radio, X, Loader2, ArrowRightLeft, ShieldCheck, Cpu } from "lucide-react";
-import { Device, WifiLink } from "../types.js";
+import type { Device, WifiLink } from "../types.js";
 
 interface WifiPeerLinkCentralProps {
   devices: Device[];
